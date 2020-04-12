@@ -6,7 +6,8 @@
 <title>Парсер решений судов</title>
 </head>
 <body>
-<h2 style = "margin-left: 20 px">Поиск документов</h2>
+<div class="main_body">
+<h2 style = "margin-top: 20px">Поиск документов</h2>
 <form action="/search" method="get" style="margin-left: 0px;"> 
     Судья: <input type="text" name="judge" value="{{judge}}" />
     Год: <select name="year"> 
@@ -34,10 +35,10 @@
             };
         </script>
 		<div style="margin-left: 0px;">
-		<input type="checkbox" onclick="toggle(this.checked, 'fabula')"> Фабула
-        <input type="checkbox" onclick="toggle(this.checked, 'witness')"> Показания свидетелей
-        <input type="checkbox" onclick="toggle(this.checked, 'prove')"> Доказательства
-        <input type="checkbox" onclick="toggle(this.checked, 'meditation')"> Размышления судьи		
+		<input type="checkbox" onclick="toggle(this.checked, 'fabula')"> Фабула &nbsp; &nbsp;
+        <input type="checkbox" onclick="toggle(this.checked, 'witness')"> Показания свидетелей  &nbsp; &nbsp;
+        <input type="checkbox" onclick="toggle(this.checked, 'prove')"> Доказательства  &nbsp; &nbsp;
+        <input type="checkbox" onclick="toggle(this.checked, 'meditation')"> Размышления судьи  &nbsp; &nbsp;
 		<button onclick="window.location.href = '{{ download_link }}';">Скачать найденные документы</button>
 		</div>
     </p>
@@ -64,9 +65,9 @@
                 <th>Регион</th>
                 <th>Суд</th>
                 <th>Дело</th>
-				<th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(9)')" style="cursor:pointer">Судья &#8645;</th> 
+				<th>Судья</th> 
                 <th>Обвиняемый</th>
-                <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(11)')" style="cursor:pointer">Дата &#8645;</th> 
+                <th>Дата</th> 
                 <th>Статьи</th>
                 <th>Ссылка</th>
             </tr>
@@ -105,5 +106,6 @@
 {% else %}
     <div>Ничего не найдено</div>
 {% endif %}
+</div>
 </body>
 </html>

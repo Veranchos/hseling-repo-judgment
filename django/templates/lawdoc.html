@@ -5,7 +5,8 @@
 <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
 <title>Парсер решений судов</title>
 </head>
-
+<body>
+<div class="main_body" style = "margin-top: 20 px">
 <h2>{{ header }}</h2>
 
 <h3> Метаданные </h3>
@@ -28,8 +29,9 @@
         {{ text }}
     {% endif %}
 {% endfor %}
-<p>Ссылка на полный текст приговора <a href="{{ url }}">{{ url }}</a></p>
+<p>Ссылка на полный текст приговора: <a href="{{ url }}">{{ url }}</a></p>
 
-<button onclick="window.location.href = '{{ download_link }}';">Скачать</button>
+<button onclick="window.location.href = '{{ download_link }}';">Скачать документ</button>
+</div>
 </body>
 </html>
